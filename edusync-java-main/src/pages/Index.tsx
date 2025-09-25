@@ -6,9 +6,10 @@ import TimetableModule from "@/components/TimetableModule";
 import AttendanceModule from "@/components/AttendanceModule";
 import StudentUploadModule from "@/components/StudentUploadModule";
 import FacultyDashboardModule from "@/components/FacultyDashboardModule";
+import UserManagement from "@/components/UserManagement";
 
 type UserRole = "admin" | "hod" | "faculty" | "student" | "govt";
-type Section = "dashboard" | "timetable" | "attendance" | "faculty" | "students" | "settings" | "analytics" | "uploads" | "faculty-dashboard";
+type Section = "dashboard" | "timetable" | "attendance" | "faculty" | "students" | "settings" | "analytics" | "uploads" | "faculty-dashboard" | "user-management";
 
 // Define student data from version2
 interface StudentData {
@@ -207,6 +208,8 @@ const Index = () => {
         return <StudentUploadModule userRole={userRole} />;
       case "faculty-dashboard":
         return <FacultyDashboardModule userRole={userRole} />;
+      case "user-management":
+        return <UserManagement userRole={userRole} />;
       default:
         return <Dashboard userRole={userRole} onNavigate={handleNavigate} />;
     }

@@ -12,7 +12,8 @@ import {
   Clock,
   UserCheck,
   Upload,
-  FileText
+  FileText,
+  UserPlus
 } from "lucide-react";
 
 interface LayoutProps {
@@ -37,6 +38,7 @@ const Layout = ({ children, userRole, currentSection, onNavigate, onLogout, curr
         { id: "attendance", label: "Attendance", icon: UserCheck },
         { id: "faculty", label: "Faculty", icon: Users },
         { id: "students", label: "Students", icon: BookOpen },
+        { id: "user-management", label: "User Management", icon: UserPlus },
         { id: "settings", label: "Settings", icon: Settings },
       ];
     }
@@ -48,6 +50,7 @@ const Layout = ({ children, userRole, currentSection, onNavigate, onLogout, curr
         { id: "attendance", label: "Take Attendance", icon: UserCheck },
         { id: "students", label: "My Students", icon: BookOpen },
         { id: "faculty-dashboard", label: "Student Submissions", icon: FileText },
+        { id: "user-management", label: "Manage Students", icon: UserPlus },
       ];
     }
 
